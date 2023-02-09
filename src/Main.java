@@ -17,7 +17,6 @@ public class Main {
         String delimeter = ";";
         try (Scanner sc = new Scanner(new FileReader(catsFileName))) {
             List<Cat> cats = new ArrayList<>();
-            int i = 0;
             while (sc.hasNext()) {
                 String[] fields = sc.nextLine().split(delimeter);
                 try {
@@ -44,7 +43,6 @@ public class Main {
         String carsFileName = "src/cars.csv";
         try (Scanner sc = new Scanner(new FileReader(carsFileName))) {
             List<Car> cars = new ArrayList<>();
-            int i = 0;
             while (sc.hasNext()) {
                 String[] fields = sc.nextLine().split(delimeter);
                 try {
@@ -55,6 +53,9 @@ public class Main {
                 }
 
             }
+            System.out.println();
+            System.out.println("Cars:");
+            System.out.println();
             for (Car car : cars) {
                 System.out.println(car);
             }
